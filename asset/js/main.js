@@ -130,35 +130,39 @@ const cursor4 = document.querySelector(".pause_btn");
 window.addEventListener("mousemove", e => {
     gsap.to(cursor, {left: e.clientX - 5, top: e.clientY - 5 });  
 });
-document.querySelector(".header").addEventListener("mouseenter", () => {
-    cursor2.classList.remove("load");
-});
-document.querySelector(".sc_story").addEventListener("mouseenter", () => {
-    cursor2.classList.remove("load");
-});
-document.querySelector(".video_controls").addEventListener("mouseenter", () => {
-  cursor4.classList.remove("load");
+$("#header").on("mouseenter", function() {
   cursor2.classList.remove("load");
 });
-document.querySelector(".video_controls").addEventListener("mouseleave", () => {
+$("#header").on("mouseleave", function() {
+  cursor2.classList.add("load");
+});
+$(".sc_story").on("mouseenter", function() {
+  cursor2.classList.remove("load");
+});
+$(".video_controls").on("mouseenter", function() {
+  cursor2.classList.remove("load");
+  cursor4.classList.remove("load");
+});
+$(".video_controls").on("mouseleave", function() {
   cursor4.classList.add("load");
 });
-document.querySelector(".sc_visual").addEventListener("mouseenter", () => {
-    cursor2.classList.add("load");
+$(".sc_visual").on("mouseenter", function() {
+  cursor2.classList.add("load");
 });
-document.querySelector(".sc_innovation").addEventListener("mouseenter", () => {
-    cursor3.classList.add("load");
-    cursor2.classList.remove("load");
+$(".sc_innovation").on("mouseenter", function() {
+  cursor3.classList.add("load");
+  cursor2.classList.remove("load");
 });
-document.querySelector(".sc_innovation").addEventListener("mouseleave", () => {
-    cursor3.classList.remove("load");
+$(".sc_innovation").on("mouseleave", function() {
+  cursor3.classList.remove("load");
 });
-document.querySelector(".progress_area").addEventListener("mouseenter", () => {
-    cursor4.classList.remove("load");
+$(".progress_area").on("mouseenter", function() {
+  cursor4.classList.remove("load");
 });
-document.querySelector(".progress_area").addEventListener("mouseleave", () => {
-    cursor4.classList.add("load");
+$(".progress_area").on("mouseleave", function() {
+  cursor4.classList.add("load");
 });
+
 
 $('.group_cursor').click(function () {
   let video = $("#main_player").get(0);
@@ -193,11 +197,6 @@ const story_v2Tl = gsap.timeline({
 })
 story_v2Tl.from(".parallax_thumb_box img",{y:-200});
 story_v2Tl.to(".parallax_thumb_box img",{y:200});
-
-
-/*
- 타임라인 영역
-*/
 
 // visual 타임라인
 gsap.registerPlugin(ScrollTrigger);
