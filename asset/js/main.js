@@ -162,6 +162,18 @@ $(".progress_area").on("mouseenter", function() {
 $(".progress_area").on("mouseleave", function() {
   cursor4.classList.add("load");
 });
+$(".sc_story_v2").on("mouseenter", function() {
+  cursor2.classList.remove("load");
+});
+$(".sc_sustain").on("mouseenter", function() {
+  cursor2.classList.remove("load");
+});
+$(".sc_join").on("mouseenter", function() {
+  cursor2.classList.remove("load");
+});
+$("#footer").on("mouseenter", function() {
+  cursor2.classList.remove("load");
+});
 
 
 $('.group_cursor').click(function () {
