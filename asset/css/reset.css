@@ -22,16 +22,11 @@ fieldset, input{
 ul{list-style: none;}
 
 
-html{
-	text-rendering: optimizeLegibility;
-    scroll-behavior: auto;
-    scrollbar-width: none!important;
-}
 body{
 	background-color: #3e2b2c;
 	color: #d1ccbf;
 	overflow-x: hidden;
-	font-family: Basis Grotesque,sans-serif;
+	font-family: 'Basis Grotesque', 'PRETENDARD', sans-serif;
 	font-size: calc(20/var(--vw)*var(--multiplier));
 	font-weight: 400;
 	line-height: 1;
@@ -46,6 +41,25 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+::-webkit-scrollbar {
+    width: 0; 
+    height: 0; 
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+@media (max-width: 1500px) {
+    ::-webkit-scrollbar {
+		width: 10px; 
+        height: 10px; 
+    }
 }
 
 
@@ -74,4 +88,35 @@ input::-webkit-inner-spin-button {
 	font-family:'Basis Grotesque';
 	font-weight:700;
 	src: url(../fonts/BasisGrotesqueArabicPro-Black.woff2) format('woff2');
+}
+
+@font-face{
+	font-family:'PRETENDARD';
+	font-weight:800;
+	src: url(../fonts/Pretendard-Bold.woff2);
+}
+@font-face{
+	font-family:'PRETENDARD';
+	font-weight:700;
+	src: url(../fonts/Pretendard-SemiBold.woff2);
+}
+@font-face{
+	font-family:'PRETENDARD';
+	font-weight:600;
+	src: url(../fonts/Pretendard-Medium.woff2);
+}
+@font-face{
+	font-family:'PRETENDARD';
+	font-weight:500;
+	src: url(../fonts/Pretendard-Regular.woff2);
+}
+@font-face{
+	font-family:'PRETENDARD';
+	font-weight:300;
+	src: url(../fonts/Pretendard-Light.woff2);
+}
+@font-face{
+	font-family:'PRETENDARD';
+	font-weight:200;
+	src: url(../fonts/Pretendard-Thin.woff2);
 }

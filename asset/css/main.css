@@ -476,15 +476,17 @@
 .headline_title{
     margin-top: -0.8px;
 }
-
+.sc_person .headline_title{
+    color: #000;
+}
 .group_info{
     grid-column: 5/12;
 
     color: #d1ccbf;
-    font-family: Basis Grotesque,sans-serif;
+    font-family: "PRETENDARD";
     font-size: calc(40/var(--view_width)*var(--window_width));
     font-weight: 300;
-    line-height: 1;
+    line-height: 1.22;
     margin-bottom: calc(80/var(--view_width)*var(--window_width));
     padding-right: calc(52/var(--view_width)*var(--window_width));
 }
@@ -499,10 +501,10 @@
     grid-column: 5/9;
 
     color: #d1ccbf;
-    font-family: Basis Grotesque,sans-serif;
+    font-family: "PRETENDARD";
     font-size: calc(18/var(--view_width)*var(--window_width));
     font-weight: 400;
-    line-height: 1.33333;
+    line-height: 1.52;
     margin-bottom: calc(80/var(--view_width)*var(--window_width) - 10/var(--view_width)*var(--window_width));
     padding-right: calc(54/var(--view_width)*var(--window_width));
 }
@@ -511,6 +513,7 @@
 }
 .sc_person .group_desc{
     margin-bottom: 0;
+    color: #000;
 }
 .sc_person .btn_area{
     padding-right: calc(165/var(--view_width)*var(--window_width));
@@ -523,11 +526,12 @@
     position: relative;
 
     cursor: pointer;
-    color: #d1ccbf;
+    color: #000;
     padding: calc(10/var(--view_width)*var(--window_width)) calc(16/var(--view_width)*var(--window_width)) calc(10/var(--view_width)*var(--window_width)) 0;
 }
 .btn_area .btn_text{
     flex-shrink: 0;
+    font-family: "PRETENDARD";
 }
 .btn_area .btn_ic{
     display: flex;
@@ -543,6 +547,9 @@
     width: 100%;
 }
 
+.sc_person .btn_area .btn_border_box{
+    background-color: #000;
+}
 .btn_area .btn_border_box{
     position: absolute;
     left: 0;
@@ -570,8 +577,14 @@
 }
 
 .sc_person{
-    background-color: #65401f;
+    background-color: #fff;
     overflow: hidden;
+}
+.sc_person .headline_ic path{
+    fill:#000;
+}
+.sc_person .group_info{
+    color: #000;
 }
 .sc_person .image_area{
     grid-column: 1/7;
@@ -899,7 +912,7 @@
     top: 50%;
     transform: translate(-50%,-50%);
 
-    background-color: #d1ccbf;
+    background-color: #fff;
     color: #2b3530;
     height: calc(100% - 76/var(--view_width)*var(--window_width));
     max-height: calc(688/var(--view_width)*var(--window_width));
@@ -1061,10 +1074,10 @@
     text-align: center;
     width: 100%;
 
-    font-family: Basis Grotesque,sans-serif;
+    font-family: "PRETENDARD";
     font-size: calc(13/var(--view_width)*var(--window_width));
     font-weight: 400;
-    line-height: 1.25;
+    line-height: 1.92;
 }
 
 .sc_story_v2{
@@ -1096,10 +1109,10 @@
 .sc_story_v2 .group_info{
     grid-column: 6/13;
 
-    font-family: Basis Grotesque,sans-serif;
+    font-family: "PRETENDARD";
     font-size: calc(40/var(--view_width)*var(--window_width));
     font-weight: 300;
-    line-height: 1;
+    line-height: 1.52;
     margin-bottom: calc(88/var(--view_width)*var(--window_width) - 10/var(--view_width)*var(--window_width));
     padding-left: calc(64/var(--view_width)*var(--window_width));
 }
@@ -1117,6 +1130,7 @@
     justify-content: space-between;
     gap: calc(150/var(--view_width)*var(--window_width));
 
+    font-family: "PRETENDARD";
     color: #d1ccbf;
     cursor: pointer;
     padding: calc(10/var(--view_width)*var(--window_width)) calc(16/var(--view_width)*var(--window_width)) calc(10/var(--view_width)*var(--window_width)) 0;
@@ -1242,10 +1256,10 @@
     grid-column: 5/-1;
 }
 .sc_sustain .sustain_desc h4{
-    font-family: Basis Grotesque,sans-serif;
+    font-family: "PRETENDARD";
     font-size: calc(18/var(--view_width)*var(--window_width));
     font-weight: 400;
-    line-height: 1.33333;
+    line-height: 1.52;
     max-width: calc(366/var(--view_width)*var(--window_width));
     width: 100%;
 }
@@ -1382,11 +1396,11 @@
     justify-content: center;
     width: 50%;
 
-    background-color: #f1e3c4;
+    background-color: #fff;
     padding: calc(110/var(--view_width)*var(--window_width)) calc(156/var(--view_width)*var(--window_width));
 }
 .sc_join .join_right .join_title{
-    font-family: Basis Grotesque,sans-serif;
+    font-family: "PRETENDARD";
     font-size: calc(27/var(--view_width)*var(--window_width));
     font-weight: 300;
     line-height: 1;
@@ -1397,7 +1411,7 @@
     max-width: calc(386/var(--view_width)*var(--window_width));
     width: 100%;
 
-    font-family: Basis Grotesque,sans-serif;
+    font-family: "PRETENDARD";
     font-size: calc(18/var(--view_width)*var(--window_width));
     font-weight: 400;
     line-height: 1.33333;
@@ -1414,7 +1428,7 @@
     margin-bottom: calc(16/var(--view_width)*var(--window_width));
 }
 .sc_join .input_box label{
-    font-family: Basis Grotesque,sans-serif;
+    font-family: "PRETENDARD";
     font-size: calc(14/var(--view_width)*var(--window_width));
     font-weight: 400;
     line-height: 1;
@@ -1422,7 +1436,7 @@
     opacity: .6;
 }
 .sc_join .input_box input{
-    background-color: #d9ceb6;
+    background-color: #fff;
     border-bottom: 1px solid #3e2b2c;
     padding: calc(12/var(--view_width)*var(--window_width)) calc(24/var(--view_width)*var(--window_width));
 
@@ -1437,6 +1451,7 @@
     margin-top: calc(40/var(--view_width)*var(--window_width));
 }
 .sc_join .category_title{
+    font-family: "PRETENDARD";
     margin-bottom: calc(24/var(--view_width)*var(--window_width));
 }
 .sc_join .category_area{
@@ -1470,7 +1485,7 @@
     cursor: pointer;
     font-size: calc(16/var(--view_width)*var(--window_width));
 
-    font-family: Basis Grotesque,sans-serif;
+    font-family: "PRETENDARD";
     font-weight: 400;
     line-height: 1;
 }
@@ -1517,6 +1532,9 @@
     transition: background-color .3s ease;
     width: 100%;
 }
+.sc_join .form_btn span{
+    font-family: "PRETENDARD";
+}
 .sc_join .form_btn:hover{
     background-color: #65401f;
 }
@@ -1540,7 +1558,7 @@
     color: #2b3530;
     opacity: .6;
 
-    font-family: Basis Grotesque,sans-serif;
+    font-family: "PRETENDARD";
     font-size: calc(14/var(--view_width)*var(--window_width));
     font-weight: 400;
     line-height: 1;
@@ -1549,7 +1567,7 @@
     display: flex;
     flex-direction: row;
 
-    background-color: #d9ceb6;
+    background-color: #fff;
     padding: calc(12/var(--view_width)*var(--window_width)) calc(24/var(--view_width)*var(--window_width));
     border-bottom: 1px solid #3e2b2c;
 }
@@ -1616,7 +1634,7 @@
 }
 .sc_join .country_select select{
     appearance: none;
-    background-color: #d9ceb6;
+    background-color: #fff;
     background-image: none;
     border: 0;
     color: inherit;
@@ -1625,7 +1643,7 @@
     width: 100%;
     outline: none;
 
-    font-family: Basis Grotesque,sans-serif;
+    font-family: "PRETENDARD";
     font-size: calc(16/var(--view_width)*var(--window_width));
     font-weight: 400;
     line-height: 1.25;
@@ -1869,6 +1887,7 @@
 
     color: #2b3530;
     font-size: calc(3000svh/var(--basesvh));
+    font-family: "PRETENDARD";
     font-weight: 300;
     padding: calc(15/var(--view_width)*var(--window_width)/2) 0;
 }
@@ -1990,5 +2009,6 @@
     position: relative;
     display:inline-block;
     font-size: calc(1600svh/var(--basesvh));
+    font-family: "PRETENDARD";
 }
 

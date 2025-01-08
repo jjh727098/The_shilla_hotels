@@ -9,7 +9,7 @@ body.fix #header{display: none;}
     transform: translateY(-100%);
 }
 #header.active{
-    background-color:#d9ceb6;
+    background-color:#fff;
 }
 #header.active .header_container{
     padding-bottom: calc(8/var(--view_width)*var(--window_width));
@@ -96,6 +96,7 @@ body.fix #header{display: none;}
     color: #fff;
     cursor: pointer;
     text-decoration: none;
+    font-family: "PRETENDARD";
 }
 #header .navi_item a:hover::before{
     transform: scaleX(1);
@@ -131,7 +132,7 @@ body.fix #header{display: none;}
     line-height: .8;
     padding: calc(18/var(--view_width)*var(--window_width)) calc(20/var(--view_width)*var(--window_width));
 
-    font-family: Basis Grotesque, sans-serif;
+    font-family: "PRETENDARD";
     font-size: calc(16 / var(--view_width)* var(--window_width));
     font-weight: 400;
 }
@@ -328,7 +329,7 @@ body.fix #header{display: none;}
     line-height: .8;
     white-space: nowrap;
 
-    font-family: Basis Grotesque,sans-serif;
+    font-family: "PRETENDARD";
     font-size: calc(30/var(--view_width)*var(--window_width));
     font-weight: 300;
 }

@@ -13,6 +13,9 @@ gsap.ticker.lagSmoothing(0)
 // 로딩화면
 const paths = document.querySelectorAll(".loading-container svg path"); // 모든 path 요소 선택
 
+// 로딩 중 Lenis 스크롤 비활성화
+lenis.stop(); // Lenis 스크롤 멈춤
+
 const timeline = gsap.timeline({
   defaults: {
     duration: 0.5,
@@ -47,6 +50,9 @@ timeline.to(".loading-container", {
   duration: 0.5,
   onComplete: () => {
     document.querySelector(".loading-container").style.display = "none";
+
+    // Lenis 스크롤 다시 활성화
+    lenis.start();
   }
 });
 
@@ -131,6 +137,9 @@ window.addEventListener("mousemove", e => {
     gsap.to(cursor, {left: e.clientX - 5, top: e.clientY - 5 });  
 });
 $("#header").on("mouseenter", function() {
+  cursor2.classList.remove("load");
+});
+$(".loading-container").on("mouseenter", function() {
   cursor2.classList.remove("load");
 });
 $("#header").on("mouseleave", function() {
@@ -318,8 +327,10 @@ const innovationTl = gsap.timeline({
         onUpdate:function(self){
 
           if (self.progress > 0.75) {
-            innotitleShow5.play();
-            innodescShow5.play();
+            gsap.delayedCall(0.5, () => { 
+              innotitleShow5.play();
+              innodescShow5.play();
+            });
 
             innotitleShow4.reverse();
             innodescShow4.reverse();
@@ -328,9 +339,11 @@ const innovationTl = gsap.timeline({
             innotitleShow2.reverse();
             innodescShow2.reverse();
           } else if (self.progress > 0.55) {
+            gsap.delayedCall(0.5, () => {
             innotitleShow4.play();
             innodescShow4.play();
-        
+           });
+
             innotitleShow5.reverse();
             innodescShow5.reverse();
             innotitleShow3.reverse();
@@ -338,9 +351,11 @@ const innovationTl = gsap.timeline({
             innotitleShow2.reverse();
             innodescShow2.reverse();
           } else if (self.progress > 0.3) {
+            gsap.delayedCall(0.5, () => {
             innotitleShow3.play();
             innodescShow3.play();
-        
+            });
+
             innotitleShow4.reverse();
             innodescShow4.reverse();
             innotitleShow5.reverse();
@@ -350,7 +365,7 @@ const innovationTl = gsap.timeline({
           } else if (self.progress > 0.2) {
             innotitleShow2.play();
             innodescShow2.play();
-        
+            
             innotitleShow3.reverse();
             innodescShow3.reverse();
             innotitleShow4.reverse();
